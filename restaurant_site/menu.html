@@ -6,57 +6,125 @@
 -->
 <html lang="en"> 
     <head> 
-        <title>Ted's Pizzaria - Menu</title>	
+        <title>Ted's Pizzaria - Menu</title>
+        <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <style>
+            article
+            {
+                text-align: center;
+                width: 33.33%;
+                float: left;
+            }
+
+            h2
+            {
+                text-align: center;
+            }
+
+            table, td
+            {
+                border: 1px solid #0d1f2d;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+
+            table
+            {
+                width: 75%;
+                margin: auto;
+                margin-bottom: 30px;
+            }
+
+            tr:nth-child(odd)
+            {
+                background-color: #50514f;
+            }    
+        </style>
     </head> 
     
     <body>
         <header>
-            <h1>Ted's Pizzaria</h1>
-            <hr />
+            <h1 style="font-family: 'Nunito', sans-serif;">Ted's Pizzaria</h1>
         </header>
 
         <nav>
             <p><a href="index.html">Home</a></p>
             <p><a href="menu.html">Menu</a></p>
             <p><a href="contact.html">Contact Us</a></p>
-            <hr />
+            <div class="clear-float"></div>
         </nav>
-        <section>
+        <section id="fooditems">
+            <h2>Brick Oven Pizzas</h2>
             <article id="item1">
-                <h2>Menu item 1</h2>
-                <p>item description</p>
+                <h3>Menu item 1</h3>
+                <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
+                        volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
+                        Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
                 <p>$0.00</p>
             </article>
             <article id="item2">
-                    <h2>Menu item 2</h2>
-                    <p>item description</p>
+                    <h3>Menu item 2</h3>
+                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
+                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
+                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
                     <p>$0.00</p>
             </article>
             <article id="item3">
-                    <h2>Menu item 3</h2>
-                    <p>item description</p>
+                    <h3>Menu item 3</h3>
+                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
+                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
+                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
                     <p>$0.00</p>
             </article>
+            <div class="clear-float"></div>
             <article id="item4">
-                    <h2>Menu item 4</h2>
-                    <p>item description</p>
+                    <h3>Menu item 4</h3>
+                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
+                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
+                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
                     <p>$0.00</p>
             </article>
             <article id="item5">
-                    <h2>Menu item 5</h2>
-                    <p>item description</p>
+                    <h3>Menu item 5</h3>
+                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
+                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
+                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
                     <p>$0.00</p>
             </article>
             <article id="item6">
-                    <h2>Menu item 6</h2>
-                    <p>item description</p>
+                    <h3>Menu item 6</h3>
+                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
+                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
+                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
                     <p>$0.00</p>
             </article>
+            <div class="clear-float"></div>
         </section>
-        
+
+        <section id="beverages">
+            <h2>Beverages</h2>
+            <table>
+                <tr>
+                    <td>Root Beer</td>
+                    <td>$3.00</td>
+                </tr>
+                <tr>
+                    <td>Bottled Water</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td>Lemonade</td>
+                    <td>$1.00</td>
+                </tr>
+                <tr>
+                    <td>Iced Tea</td>
+                    <td>$1.25</td>
+                </tr>
+            </table>
+        </section>
 
         <footer>
-            <hr />
             <p>Pizza Rd, McKinney, TX, 75069</p>
             <p>214-937-1224</p>
         </footer>
