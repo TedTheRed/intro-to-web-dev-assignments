@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+    <style>
+        .container
+        {
+            max-width: 800px;
+            text-align: center;
+        }
+        .table
+        {
+            margin: 0 auto;
+            max-width: 300px;
+        }
+        tr
+        {
+            text-align: left;
+        }
+        caption
+        {
+            text-align: center;
+            color: black;
+            font-size: 2em;
+            border-top: 3px solid black;
+            margin-top: 20px;
+        }
+        button
+        {
+            display: block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Lucky Sevens</h1>
+    <form name="luckySevens" onsubmit="return validate();" 
+          onreset="resetForm();" class="form-inline">
+            <div class="form-group">
+                <label for="bet">Starting Bet:</label>
+                <input type="number" placeholder="$0.00" class="form-control" id="bet">
+            </div>
+            <br>
+            <button type="submit" id="playButton" class="btn btn-default">Play</button>
+    </form>
+    <table id="results" class="table table-striped" style="display:none;">
+        <caption>Results</caption>
+        <tbody>
+            <tr>
+                <td>Starting Bet</td>
+                <td><span id="startingBet"></span></td>
+            </tr>
+            <tr>
+                <td>Total Rolls Before Going Broke</td>
+                <td><span id="numRolls"></span></td>
+            </tr>
+            <tr>
+                <td>Highest Amount Won</td>
+                <td><span id="highestWin"></span></td>
+            </tr>
+            <tr>
+                <td>Roll Count at Highest Amount Won</td>
+                <td><span id="rollAtHighestWin"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

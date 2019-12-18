@@ -1,0 +1,66 @@
+/*
+Creator: Robert Sturm
+Date created: 1019-12-09
+Date last modified: 
+*/
+
+/*
+Color Scheme
+Page background: Lapis Lazuli #247ba0
+Default font color: White #fffcff
+Text highlights: Pastel Gray #cbd4c2 Dark Liver #50514f
+Additional Highlights: Khaki #c3b299 
+*/
+
+body
+{
+    background-color: #247ba0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fffcff;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header, footer
+{
+    background-color: #c3b299;
+    color: #50514f;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+nav
+{
+    border-top: 3px solid #c3b299;
+    border-bottom: 3px solid #c3b299;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+
+nav a
+{
+    background-color: #cbd4c2;
+    color: #50514f;
+    padding: 8px;
+    margin: 15px;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+nav a:visited
+{
+    color: #663a62c9;
+}
+
+nav a:hover
+{
+    font-weight: bold;
+}
+
+.clear-float
+{
+    clear:both;
+}
