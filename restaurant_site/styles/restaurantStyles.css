@@ -37,6 +37,7 @@ header, footer
 nav
 {
     border-bottom: 3px solid #c3b299;
+    background-color: #50514f;
 }
 
 nav a
