@@ -62,6 +62,14 @@ function validate()
         document.forms["luckySevens"]["bet"].focus();
         return false;
     }
+    // this is to stop the user from overloading their browser and making the loop run several millions times
+    if (bet > 1000000)
+    {
+        alert("exceeded bet limit, please chose a lower bet")
+        document.forms["luckySevens"]["bet"].parentElement.className = "form-group has-error";
+        document.forms["luckySevens"]["bet"].focus();
+        return false;
+    }
     // we may want to reuse this game in the future so it's better that we call a function instead of lumping it all in our validation code
     playGame(bet);
     return false;

@@ -6,37 +6,31 @@
 -->
 <html lang="en"> 
     <head> 
-        <title>Ted's Pizzaria - Contact</title>	
+        <title>Ted's Pizzaria - Contact</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
         <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <script type="text/JavaScript" src="scripts/formValidation.js"></script>
         <style>
             label
             {
                 display: block;
                 text-align: right;
-                width: 40%;
                 font-size: 1.1em;
                 margin: 5px 5px;
                 float: left;
                 clear: left;
             }
 
-            input[type=radio]
+            input[type=text], input[type=email]
             {
-                margin: 12px 5px;
-            }
-
-            input[type=checkbox]
-            {
-                margin: 12px 5px;
-            }
-
-            input[type=text]
-            {
-                border: 2px solid #0d1f2d;
-                width: 30%;
                 padding: 2px 2px;
-                margin: 5px 5px;
+                margin: 10px 5px;
                 box-sizing: border-box;
                 font-size: 1.1em;     
             }
@@ -53,11 +47,10 @@
             {
                 margin: 5px 5px;
                 padding: 2px 2px;
-                width: 30%;
                 font-size: 1em;
             }
 
-            input[type=submit]
+            button[type=submit]
             {
                 display: block;
                 font-size: 1.2em;
@@ -69,7 +62,7 @@
                 margin-bottom: 10px;
             }
 
-            input[type=submit]:hover
+            button[type=submit]:hover
             {
                 background-color: #f2eded;
                 color: #546a7b;
@@ -77,7 +70,6 @@
 
             textarea
             {
-                width: 30%;
                 height: 100px;
                 padding: 12px 20px;
                 margin: 5px 5px;
@@ -96,59 +88,102 @@
     </head> 
     
     <body>
-        <header>
-            <h1 style="font-family: 'Nunito', sans-serif;">Ted's Pizzaria</h1>
-        </header>
-
-        <nav>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="menu.html">Menu</a></p>
-            <p><a href="contact.html">Contact Us</a></p>
-            <div class="clear-float"></div>
-        </nav>
-        
-        <form action="submit.html" method="POST"></form>
-        <label class="required" for="name">Name:</label>
-        <input type="text" id="name" name="name" required> <br/>
-        <label class="required" for="email">Email:</label>
-        <input type="text" id="email" name="email" required> <br/>
-        <label class="required" for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required> <br/>
-
-        <label class="required" for="inquiry">Reason for Inquiry:</label>
-        <select id="inquiry" name="inquiry" required>
-                <option value="default" selected>Catering</option>
-                <option value="party">Private Party</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-        </select> <br/>
-
-        <label id="info" for="info">Additional Information:</label>
-        <textarea id="info" name="info"></textarea> <br />
-
-        <label class="required">Have you been to the restaurant?</label>
-        <input type="radio" id="no" name="questionare" value="no" required>
-        <lable id="no" for="no">No</lable> 
-        <input type="radio" id="yes" name="questionare" value="yes">
-        <lable id="yes" for="yes">Yes</lable>  <br />
-
-        <label id="contact">Best days to contact you:</label>
-        <input type="checkbox" id="monday" name="day" value="monday">
-        <lable for="monday">M</lable> 
-        <input type="checkbox" id="tuesday" name="day" value="tuesday">
-        <lable for="tuesday">T</lable> 
-        <input type="checkbox" id="wednesday" name="day" value="wednesday">
-        <lable for="wednesday">W</lable>
-        <input type="checkbox" id="thursday" name="day" value="thursday">
-        <lable for="thursday">Th</lable> 
-        <input type="checkbox" id="friday" name="day" value="friday">
-        <lable for="friday">F</lable> <br />
-
-        <input type="submit" name="submit" value="Send Request">
-
+        <div class="container">
+            <noscript>JavaScript is disabled! This site works best with JavaScript enabled!</noscript>
+            <header class="jumbotron jumbotron-fluid">
+                <h1 style="font-family: 'Nunito', sans-serif;">Ted's Pizzaria</h1>
+                <p class="lead">Opening a new location in Allen!</p>
+            </header>
+            
+            <nav>
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="index.html"><i class="material-icons">home</i></a></div>
+                <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="menu.html">Menu</a></div>
+                <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="contact.html">Contact Us</a></div>
+                <div class="clear-float"></div>
+            </div>
+            </nav>
+        <form name="contact" onsubmit="return validate();">
+            <div class="form-group row">
+                <label for="name" class="col-sm-4 col-form-label" style="font-weight: bold;">Name:</label>
+                <div class="col-sm-4">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 col-form-label" style="font-weight: bold;">Email:</label>
+                <div class="col-sm-4">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required> 
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="phone" class="col-sm-4 col-form-label" style="font-weight: bold;">Phone:</label>
+                <div class="col-sm-4">
+                    <input type="text" id="phone" name="phone" class="form-control" placeholder="000-000-0000" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inquiry" class="col-sm-4 col-form-label" style="font-weight: bold;">Reason for Inquiry:</label>
+                <div class="col-sm-4">
+                    <select id="inquiry" name="inquiry" class="form-control" required>
+                        <option value="catering" selected>Catering</option>
+                        <option value="party">Private Party</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="info" id="info" class="col-sm-4 col-form-label">Additional Information:</label>
+                <div class="col-sm-4">
+                    <textarea id="info" name="info" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row align-items-center">
+                <label for="visited" id="visited" class="col-sm-4 col-form-label" style="font-weight: bold;">Have you been to the restaurant?</label>
+                <div class="col-sm-4">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="no" name="visited" value="no">
+                        <lable for="no" class="form-check-label" id="no">No</lable> 
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="yes" name="visited" value="yes">
+                        <lable for="yes" class="form-check-label" id="yes">Yes</lable>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center">
+                <label for="contactDay" id="contactDay" class="col-sm-4 col-form-label">Best days to contact you:</label>
+                <div class="col-sm-4">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="contactDay" name="day" value="M">
+                        <lable for="monday" class="form-check-label">M</lable> 
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="contactDay" name="day" value="T">
+                        <lable for="tuesday" class="form-check-label">T</lable>
+                    </div> 
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="contactDay" name="day" value="W">
+                        <lable for="wednesday" class="form-check-label">W</lable>
+                    </div>     
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="contactDay" name="day" value="Th">
+                        <lable for="thursday" class="form-check-label">Th</lable>
+                    </div> 
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="contactDay" name="day" value="F">
+                        <lable for="friday" class="form-check-label">F</lable> 
+                    </div>
+                </div> 
+            </div>
+                <button type="submit" class="btn btn-primary mb-2" name="submit">Send Request</button>
+            </div>
+        </form>
         <footer>
             <p>Pizza Rd, McKinney, TX, 75069</p>
             <p>214-937-1224</p>
         </footer>
+        </div>
     </body> 
 </html>

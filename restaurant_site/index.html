@@ -7,33 +7,69 @@
 <html lang="en"> 
     <head> 
         <title>Ted's Pizzaria - Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     </head> 
     
     <body>
-        <header>
+        <div class="container">
+        <noscript>JavaScript is disabled! This site works best with JavaScript enabled!</noscript>
+        <header class="jumbotron jumbotron-fluid">
             <h1 style="font-family: 'Nunito', sans-serif;">Ted's Pizzaria</h1>
+            <p class="lead">Opening a new location in Allen!</p>
         </header>
 
         <nav>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="menu.html">Menu</a></p>
-            <p><a href="contact.html">Contact Us</a></p>
-            <div class="clear-float"></div>
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="index.html"><i class="material-icons">home</i></a></div>
+                <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="menu.html">Menu</a></div>
+                <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="contact.html">Contact Us</a></div>
+                <div class="clear-float"></div>
+            </div>
         </nav>
-
-        <img src="images/pizza.jpg" alt="picture of an italian pizza" style="display: block; margin-left: auto; margin-right: auto; margin-top: 30px; width: 50%;">
-        <p style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 100px; width:75%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
-                volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
-                Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum. 
-                Sed dui risus, tempor in nulla a, dictum vestibulum erat. Aenean sapien erat, 
-                pharetra in magna nec, bibendum pharetra nunc.
+        <div id="news" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <p style="color:#fffcff; background-color: #154e66; text-align: center; padding: 25px; font-size: 1.2em; ">We're opening a new location in Allen!</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p style="color:#fffcff; background-color: #154e66; text-align: center; padding: 25px; font-size: 1.2em; ">We're rolling out our seasonal menu, with special options for this season.</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p style="color:#fffcff; background-color: #154e66; text-align: center; padding: 25px; font-size: 1.2em; ">The Drink of the Month is SG Special Brew.</p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#news" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#news" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        <div class="row">
+            <img src="images/pizza.jpg" alt="picture of an italian pizza" style="display: block; margin-left: auto; margin-right: auto; margin-top: 30px; width: 50%;">
+        </div>
+        <div class="row">
+            <p style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 100px; width:75%;">Welcome to Ted's Pizzaria!
+                Here at Ted's Pizzaria we are proud to serve you our delecious brick oven pizzas.
+                enjoy a wide veriety of flavors from our specialty pizzas. we are a family owned 
+                business that has been opperating for over 20 years and we want to treat you like
+                part of the family. Enjoy outdoor seating during nice weather as you sit around
+                with your firends and eat pizza. What are you waiting for? come on over and lets eat some pizza!
             </p>
+        </div>
         <footer>
             <p>Pizza Rd, McKinney, TX, 75069</p>
             <p>214-937-1224</p>
         </footer>
+        </div>
     </body> 
 </html>

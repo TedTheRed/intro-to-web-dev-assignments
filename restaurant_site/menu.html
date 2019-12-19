@@ -7,13 +7,18 @@
 <html lang="en"> 
     <head> 
         <title>Ted's Pizzaria - Menu</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <style>
             article
             {
                 text-align: center;
-                width: 33.33%;
                 float: left;
             }
 
@@ -44,62 +49,71 @@
     </head> 
     
     <body>
-        <header>
-            <h1 style="font-family: 'Nunito', sans-serif;">Ted's Pizzaria</h1>
-        </header>
-
-        <nav>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="menu.html">Menu</a></p>
-            <p><a href="contact.html">Contact Us</a></p>
-            <div class="clear-float"></div>
-        </nav>
+    <div class="container">
+            <noscript>JavaScript is disabled! This site works best with JavaScript enabled!</noscript>
+            <header class="jumbotron jumbotron-fluid">
+                <h1 style="font-family: 'Nunito', sans-serif;">Ted's Pizzaria</h1>
+                <p class="lead">Opening a new location in Allen!</p>
+            </header>
+            
+            <nav>
+                <div class="row align-items-center">
+                    <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="index.html"><i class="material-icons">home</i></a></div>
+                    <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="menu.html">Menu</a></div>
+                    <div class="col d-flex justify-content-center"><a class="btn badge-pill" href="contact.html">Contact Us</a></div>
+                    <div class="clear-float"></div>
+                </div>
+            </nav>
         <section id="fooditems">
             <h2>Brick Oven Pizzas</h2>
-            <article id="item1">
-                <h3>Menu item 1</h3>
-                <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
-                        volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
-                        Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
-                <p>$0.00</p>
-            </article>
-            <article id="item2">
-                    <h3>Menu item 2</h3>
-                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
-                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
-                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
-                    <p>$0.00</p>
-            </article>
-            <article id="item3">
-                    <h3>Menu item 3</h3>
-                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
-                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
-                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
-                    <p>$0.00</p>
-            </article>
-            <div class="clear-float"></div>
-            <article id="item4">
-                    <h3>Menu item 4</h3>
-                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
-                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
-                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
-                    <p>$0.00</p>
-            </article>
-            <article id="item5">
-                    <h3>Menu item 5</h3>
-                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
-                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
-                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
-                    <p>$0.00</p>
-            </article>
-            <article id="item6">
-                    <h3>Menu item 6</h3>
-                    <p>Curabitur nec urna at eros efficitur tempor. Nam ornare dui vitae felis sollicitudin, 
-                            volutpat imperdiet enim convallis. Pellentesque consectetur sodales molestie. 
-                            Phasellus vitae congue velit. Sed elementum lacus sed sapien egestas rutrum.</p>
-                    <p>$0.00</p>
-            </article>
-            <div class="clear-float"></div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <article id="item1">
+                        <h3>Poping Chicken</h3>
+                        <p>Spicy cream cheese, chicken, mozzarella, provolone, bacon, onions, and jalapenos. Finished with a drizzle of Sriracha sauce.</p>
+                        <p>$12.99</p>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article id="item2">
+                            <h3>Meet Lovers</h3>
+                            <p>Pizza sauce, pepperoni, ham, beef, Italian sausage, sausage and mozzarella.</p>
+                            <p>$13.99</p>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article id="item3">
+                            <h3>The Italian</h3>
+                            <p>Our signature blush sauce with meatballs, Italian sausage, mozzarella cheese, provolone cheese and tomatoes. Finished off with fresh parmesan and oregano. </p>
+                            <p>$11.99</p>
+                    </article>
+                </div>
+                <div class="clear-float"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <article id="item4">
+                            <h3>Margherita</h3>
+                            <p>Olive oil, garlic, basil leaves, tomatoes, mozzarella cheese and topped with parmesan romano cheese mix. </p>
+                            <p>$10.99</p>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article id="item5">
+                            <h3>Veggie Spice</h3>
+                            <p>Olive oil, garlic, jalapenos, squash, tomatoes, spinach, feta cheese, pepper jack, mozzarella and parmesan romano cheese mix.</p>
+                            <p>$9.99</p>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article id="item6">
+                            <h3>Mediterranean</h3>
+                            <p>Olive oil, chicken, mozzarella, cheddar, feta, onions, green peppers, tomatoes and green olives.</p>
+                            <p>$10.99</p>
+                    </article>
+                </div>
+                <div class="clear-float"></div>
+            </div>
         </section>
 
         <section id="beverages">
@@ -128,5 +142,6 @@
             <p>Pizza Rd, McKinney, TX, 75069</p>
             <p>214-937-1224</p>
         </footer>
+        </div>
     </body> 
 </html>
